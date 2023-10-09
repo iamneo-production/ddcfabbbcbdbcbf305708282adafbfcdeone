@@ -60,16 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isValid = false;
       }
 
-      // Validate password
-      var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[&%$#*()_])[A-Za-z\d&%$#*()_]{8,16}$/;
-      if (!passwordRegex.test(passwordInput.value.trim())) {
-        displayErrorMessage(
-          passwordInput,
-          'Password must contain at least 1 uppercase, 1 lowercase, 1 number, and 1 special character. Min 8, Max 16 characters.'
-        );
-        //Weak123@!
-        isValid = false;
-      }
+    
 
       // Validate confirm password
       if (confirmPasswordInput.value.trim() !== passwordInput.value.trim()) {
